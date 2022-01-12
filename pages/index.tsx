@@ -5,13 +5,14 @@ import { Button } from 'baseui/button';
 import { useTeekDispatch, useTeekSelector } from '../hooks';
 import { selectGlobal } from '../redux/selectors';
 import { toggleDrawer } from '../redux/slices/global.slice';
+import { Container } from '../components/atoms/container';
 
 export default function Home() {
   const dispatch = useTeekDispatch();
   const { drawerIsOpen } = useTeekSelector(selectGlobal);
 
   return (
-    <Block>
+    <Container paddingTop="10px">
       <DisplayLarge>This is Home</DisplayLarge>
       {drawerIsOpen
         ? (<DisplaySmall>The drawer is open</DisplaySmall>)
@@ -28,6 +29,6 @@ export default function Home() {
       >
         Toggle Drawer
       </Button>
-    </Block>
+    </Container>
   );
 }
