@@ -21,9 +21,11 @@
     "@atoms/*": ["components/atoms/*"],
     "@molecules/*": ["components/molecules/*"],
     "@organisms/*": ["components/organisms/*"],
-    "@graphql/*": ["components/graphql/*"],
-    "@lib/*": ["components/lib/*"],
-    "@redux/*": ["components/redux/*"],
-    "@utils/*": ["components/utils/*"],
+    "@graphql/*": ["graphql/*"],
+    "@lib/*": ["lib/*"],
+    "@redux/*": ["redux/*"],
+    "@utils/*": ["utils/*"],
+    "@types/*": ["models/types/*"],
+    "@interfaces/*": ["models/interfaces/*"],
   }
 }
