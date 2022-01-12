@@ -6,7 +6,10 @@
     },
     "extends": [
         "plugin:react/recommended",
-        "airbnb"
+        "plugin:@typescript-eslint/recommended",
+        "next",
+        "airbnb",
+        "next/core-web-vitals"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -18,8 +21,15 @@
     },
     "plugins": [
         "react",
+        "baseui",
         "@typescript-eslint"
     ],
     "rules": {
+      "react/jsx-props-no-spreading": "off",
+      "import/extensions": "off",
+      "react/jsx-filename-extension": "off",
+      "react/display-name": "off",
+      "func-names": "off",
+      "@typescript-eslint/ban-ts-comment": "off"
     }
 }
