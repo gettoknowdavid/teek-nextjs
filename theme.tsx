@@ -1,8 +1,8 @@
-import { createLightTheme, lightThemePrimitives } from 'baseui';
+import { createDarkTheme, darkThemePrimitives } from 'baseui';
 
-const TeekTheme = createLightTheme(
+const TeekTheme = createDarkTheme(
   {
-    ...lightThemePrimitives,
+    ...darkThemePrimitives,
     primaryFontFamily: 'Poppins',
   },
   {},

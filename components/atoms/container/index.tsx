@@ -6,7 +6,7 @@ export function Container(props: BlockProps) {
   return (
     <Block
       {...props}
-      backgroundColor={backgroundColor || 'mono400'}
+      backgroundColor={backgroundColor || '#1D1E26'}
       paddingRight={paddingRight || ['10px', '10px', '20px', '80px']}
       paddingLeft={paddingLeft || ['10px', '10px', '20px', '80px']}
     />
