@@ -1,34 +1,50 @@
 import React from 'react';
+import { Input } from 'baseui/input';
+import { useStyletron } from 'baseui';
 import { Block } from 'baseui/block';
-import { DisplayLarge, DisplaySmall } from 'baseui/typography';
-import { Button } from 'baseui/button';
-import { useTeekDispatch, useTeekSelector } from '../hooks';
-import { selectGlobal } from '../redux/selectors';
-import { toggleDrawer } from '../redux/slices/global.slice';
 import { Container } from '../components/atoms/container';
+import Layout from '../layout';
 
 export default function Home() {
-  const dispatch = useTeekDispatch();
-  const { drawerIsOpen } = useTeekSelector(selectGlobal);
+  const [css, theme] = useStyletron();
 
   return (
-    <Container paddingTop="10px">
-      <DisplayLarge>This is Home</DisplayLarge>
-      {drawerIsOpen
-        ? (<DisplaySmall>The drawer is open</DisplaySmall>)
-        : (<DisplaySmall>The drawer is not open!</DisplaySmall>)}
-      <Button
-        onClick={() => dispatch(toggleDrawer())}
-        overrides={{
-          BaseButton: {
-            style: ({ $theme }) => ({
-              backgroundColor: !drawerIsOpen ? $theme.colors.positive : $theme.colors.mono900,
-            }),
-          },
-        }}
-      >
-        Toggle Drawer
-      </Button>
-    </Container>
+    <Layout>
+      <Container>
+        <Block className={css({
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          height: '100vh',
+          overflow: 'hidden',
+        })}
+        >
+          <Input
+            placeholder="Type something and press enter..."
+            overrides={{
+              Input: {
+                style: ({ $theme }) => ({
+                  fontSize: $theme.typography.ParagraphSmall.fontSize,
+                  '::placeholder': { color: $theme.colors.mono600, fontWeight: '300' },
+                }),
+              },
+              Root: {
+                style: () => ({
+                  borderTopWidth: 0,
+                  borderRightWidth: 0,
+                  borderBottomWidth: 0,
+                  borderLeftWidth: 0,
+                  borderTopRightRadius: '8px',
+                  borderTopLeftRadius: '8px',
+                  borderBottomRightRadius: '8px',
+                  borderBottomLeftRadius: '8px',
+                  maxWidth: '600px',
+                }),
+              },
+            }}
+          />
+        </Block>
+      </Container>
+    </Layout>
   );
 }
