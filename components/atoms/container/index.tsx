@@ -7,8 +7,8 @@ export function Container(props: BlockProps) {
     <Block
       {...props}
       backgroundColor={backgroundColor || '#1D1E26'}
-      paddingRight={paddingRight || ['10px', '10px', '20px', '80px']}
-      paddingLeft={paddingLeft || ['10px', '10px', '20px', '80px']}
+      paddingRight={paddingRight || ['10px', '10px', '20px', '100px']}
+      paddingLeft={paddingLeft || ['10px', '10px', '20px', '100px']}
     />
   );
 }

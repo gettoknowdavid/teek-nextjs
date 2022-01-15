@@ -32,6 +32,7 @@
       "func-names": "off",
       "@typescript-eslint/ban-ts-comment": "off",
       "import/prefer-default-export": "off",
-      "import/no-extraneous-dependencies": "off"
+      "import/no-extraneous-dependencies": "off",
+      "no-shadow": "off"
     }
 }

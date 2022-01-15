@@ -14,7 +14,6 @@ export default function Layout({ children }: Props) {
           maxWidth: '1440px',
           margin: '0px auto',
           position: 'relative',
-          overflowX: 'hidden',
         }),
       },
     }}
